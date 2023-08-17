@@ -1,0 +1,64 @@
+{
+  "name": "@configs/shared",
+  "version": "1.1.0",
+  "description": "All configs are here for making your development easier like EsLint, Prettier, TailWind, tsconfig etc.",
+  "author": "Hridoy Ahmed",
+  "license": "MIT",
+  "repository": "https://github.com/codewithhridoy/config.git",
+  "bugs": "https://github.com/codewithhridoy/config/issues",
+  "homepage": "https://github.com/codewithhridoy/config#readme",
+  "private": true,
+  "scripts": {
+    "format": "turbo run format --color",
+    "format:check": "turbo run format:check --color",
+    "build": "turbo run build --color",
+    "publish-packages": "turbo run publish-packages --color",
+    "test:publish-packages": "turbo run test:publish-packages --color",
+    "lint": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
+    "int": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\" --cache --ignore-unknown",
+    "int:check": "prettier --check .",
+    "generate-docs": "node src/generateDocs.mjs"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "tailwind",
+    "tailwind-config",
+    "tsconfig",
+    "typescript",
+    "typescript-config",
+    "shared-configs",
+    "prettier",
+    "prettier-config",
+    "javascript",
+    "javascript-config",
+    "config",
+    "style-guide",
+    "turbo"
+  ],
+  "eslintConfig": {
+    "root": false,
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "./packages/eslint/index.js"
+    ]
+  },
+  "prettier": "./packages/prettier/index.js",
+  "dependencies": {
+    "markdown-table": "3.0.3",
+    "turbo": "1.10.12"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "eslint": "8.47.0",
+    "prettier": "3.0.1",
+    "tsup": "^7.2.0"
+  },
+  "packageManager": "pnpm@8.6.12"
+}
