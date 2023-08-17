@@ -14,6 +14,8 @@
  },
  "scripts": {
   "build": "rollup -c",
+   "publish-packages": "pnpm publish --access public --no-git-checks --provenance",
+   "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run",
   "format": "prettier . --write --cache --ignore-unknown",
   "format:check": "prettier . --check --ignore-unknown"
  },
