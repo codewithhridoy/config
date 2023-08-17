@@ -1,7 +1,9 @@
 name: Publish [Github]
 on:
- release:
-  types: [created]
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
  publish:
@@ -14,7 +16,7 @@ jobs:
    fail-fast: false
    matrix:
     language: ["javascript"]
-    node: ["18.x"]
+    node: ["16.x"]
   steps:
    - name: 🧱 Checkout repository
      uses: actions/checkout@v3
