@@ -9,6 +9,7 @@
   "homepage": "https://github.com/codewithhridoy/config#readme",
   "main": "index.js",
   "scripts": {
+    "release": "pnpm run build && changeset publish",
     "publish-packages": "pnpm publish --access public --no-git-checks --provenance",
     "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run",
     "format": "prettier . --write --cache --ignore-unknown",
