@@ -147,15 +147,3 @@ export default {
 | `trailingComma`              | `es5`       | [Documentation](https://prettier.io/docs/en/options.html#trailing-comma)               |
 | `useTabs`                    | `false`     | [Documentation](https://prettier.io/docs/en/options.html#use-tabs)                     |
 <!--END_SECTION:prettier-->
-
-# 📝 [`@config/renovate`](/packages/renovate/)
-
-> **Note**: **This is not a package - it is a configuration preset!**
-
-### 🔩 Usage
-- In your `renovate.json` file, add the following:
-```json
-{
- "extends": ["https://github.com/codewithhridoy/config/packages/renovate/index.json"]
-}
-```
