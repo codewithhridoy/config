@@ -1,26 +1,27 @@
 {
- "name": "@shared-config/renovate",
- "version": "1.1.0",
- "description": "All configs are here for making your development easier like EsLint, Prettier, TailWind, tsconfig etc.",   "author": "Hridoy Ahmed",
- "license": "MIT",
- "repository": "https://github.com/codewithhridoy/config.git",
- "bugs": "https://github.com/codewithhridoy/config/issues",
- "homepage": "https://github.com/codewithhridoy/config#readme",
- "main": "index.js",
- "type": "module",
- "exports": {
-   "import": "./dist/mjs/index.js",
-   "require": "./dist/cjs/index.cjs"
- },
- "scripts": {
-  "format": "prettier . --write --cache --ignore-unknown",
-  "format:check": "prettier . --check --ignore-unknown"
- },
- "files": [
-  "dist",
-  "README.md"
- ],
- "keywords": [
+  "name": "@shared-config/renovate",
+  "version": "2.0.0",
+  "description": "All configs are here for making your development easier like EsLint, Prettier, TailWind, tsconfig etc.",
+  "author": "Hridoy Ahmed",
+  "license": "MIT",
+  "repository": "https://github.com/codewithhridoy/config.git",
+  "bugs": "https://github.com/codewithhridoy/config/issues",
+  "homepage": "https://github.com/codewithhridoy/config#readme",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    "import": "./dist/mjs/index.js",
+    "require": "./dist/cjs/index.cjs"
+  },
+  "scripts": {
+    "format": "prettier . --write --cache --ignore-unknown",
+    "format:check": "prettier . --check --ignore-unknown"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
     "eslint",
     "eslint-config",
     "tailwind",
@@ -42,5 +43,5 @@
   "devDependencies": {
     "rollup": "3.28.0"
   },
- "packageManager": "pnpm@8.6.12"
+  "packageManager": "pnpm@8.6.12"
 }
