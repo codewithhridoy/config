@@ -7,15 +7,8 @@
   "repository": "https://github.com/codewithhridoy/config.git",
   "bugs": "https://github.com/codewithhridoy/config/issues",
   "homepage": "https://github.com/codewithhridoy/config#readme",
-  "main": "dist/cjs/index.cjs",
-  "module": "dist/mjs/index.js",
-  "type": "commonjs",
-  "exports": {
-    "import": "./dist/mjs/index.js",
-    "require": "./dist/cjs/index.cjs"
-  },
+  "main": "index.js",
   "scripts": {
-    "build": "rollup -c",
     "publish-packages": "pnpm publish --access public --no-git-checks --provenance",
     "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run",
     "format": "prettier . --write --cache --ignore-unknown",
@@ -51,9 +44,6 @@
   "dependencies": {
     "eslint-plugin-import": "2.28.0",
     "eslint-plugin-prettier": "5.0.0"
-  },
-  "devDependencies": {
-    "rollup": "3.28.0"
   },
   "peerDependencies": {
     "eslint": ">=8.0.0"
