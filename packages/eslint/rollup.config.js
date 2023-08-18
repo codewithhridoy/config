@@ -2,7 +2,7 @@ export default {
   input: 'index.js',
   output: [
     {
-      file: 'dist/mjs/index.mjs',
+      file: 'dist/mjs/index.js',
       format: 'esm',
       compact: true,
     },
