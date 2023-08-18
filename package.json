@@ -14,8 +14,8 @@
     "build": "turbo run build --color",
     "publish-packages": "turbo run publish-packages --color",
     "test:publish-packages": "turbo run test:publish-packages --color",
-    "lint": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
-    "int": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\" --cache --ignore-unknown",
+    "lint": "eslint --fix .",
+    "int": "prettier --write . --cache --ignore-unknown",
     "int:check": "prettier --check .",
     "generate-docs": "node src/generateDocs.mjs"
   },

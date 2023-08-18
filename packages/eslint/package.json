@@ -8,7 +8,7 @@
   "bugs": "https://github.com/codewithhridoy/config/issues",
   "homepage": "https://github.com/codewithhridoy/config#readme",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "exports": {
     "import": "./dist/mjs/index.js",
     "require": "./dist/cjs/index.cjs"
