@@ -13,6 +13,7 @@
     "format:check": "turbo run format:check --color",
     "build": "turbo run build --color",
     "publish-packages": "turbo run publish-packages --color",
+    "release": "turbo run build && changeset publish",
     "test:publish-packages": "turbo run test:publish-packages --color",
     "lint": "eslint --fix .",
     "int": "prettier --write . --cache --ignore-unknown",
