@@ -23,6 +23,6 @@ jobs:
           node-version: ${{ matrix.node }}
           cache: 'pnpm'
       - name: 🚀 Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
       - name: 🚀 Run ESLint
         run: pnpm lint
