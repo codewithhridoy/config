@@ -1,152 +1,163 @@
 module.exports = {
- extends: ["eslint:recommended"],
- plugins: ["import", "prettier"],
- ignorePatterns: ["dist/", "coverage/"],
- parserOptions: {
-  ecmaVersion: "latest",
- },
- rules: {
-  // Enforce consistent line breaks
-  "linebreak-style": ["error", "unix"],
+  extends: ['eslint:recommended'],
+  plugins: ['import', 'prettier'],
+  ignorePatterns: ['dist/', 'coverage/'],
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
+  rules: {
+    // Enforce consistent line breaks
+    'linebreak-style': ['error', 'unix'],
 
-  // Enforce prettier formatting rules
-  "prettier/prettier": "warn",
+    // Enforce prettier formatting rules
+    'prettier/prettier': 'warn',
 
-  // Enforce consistent quotes
-  quotes: ["error", "double"],
+    // Enforce consistent quotes
+    quotes: ['error', 'single'],
 
-  // Enforce semicolons at the end of statements
-  semi: ["warn", "always"],
+    // No need to add semicolon
+    semi: ['warn', 'never'],
 
-  // Enforce trailing commas where possible
-  "comma-dangle": [
-   "error",
-   {
-    arrays: "always-multiline",
-    objects: "always-multiline",
-    imports: "always-multiline",
-    exports: "always-multiline",
-    functions: "never",
-   },
-  ],
+    // add new line above return
+    'newline-before-return': 'error',
 
-  // Disallow the use of eval()
-  "no-eval": "error",
+    // add new line below import
+    'import/newline-after-import': [
+      'error',
+      {
+        count: 1,
+      },
+    ],
 
-  // Enforce consistent function names
-  "func-names": ["error", "as-needed"],
+    // Enforce trailing commas where possible
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'never',
+      },
+    ],
 
-  // Enforce camelCase naming convention
-  camelcase: ["warn", { properties: "never", ignoreDestructuring: true }],
+    // Disallow the use of eval()
+    'no-eval': 'error',
 
-  // Disallow unused variables
-  "no-unused-vars": ["warn", { argsIgnorePattern: "^_", ignoreRestSiblings: true }],
+    // Enforce consistent function names
+    'func-names': ['error', 'as-needed'],
 
-  // Enforce consistent import order
-  "import/order": [
-   "warn",
-   {
-    groups: ["external", "internal", "parent", "sibling", "index", "builtin"],
-    "newlines-between": "never",
-    alphabetize: {
-     order: "asc",
-     caseInsensitive: true,
-    },
-   },
-  ],
+    // Enforce camelCase naming convention
+    camelcase: ['warn', { properties: 'never', ignoreDestructuring: true }],
 
-  // Enforce consistent spacing before and after keywords
-  "prefer-arrow-callback": "error",
+    // Disallow unused variables
+    'no-unused-vars': ['warn', { argsIgnorePattern: '^_', ignoreRestSiblings: true }],
 
-  // Enforce consistent spacing around blocks
-  "block-spacing": "error",
+    // Enforce consistent import order
+    'import/order': [
+      'warn',
+      {
+        groups: ['external', 'internal', 'parent', 'sibling', 'index', 'builtin'],
+        'newlines-between': 'never',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
 
-  // Enforce consistent spacing around commas
-  "comma-spacing": "error",
+    // Enforce consistent spacing before and after keywords
+    'prefer-arrow-callback': 'error',
 
-  // Enforce consistent spacing before and after keywords
-  "keyword-spacing": "error",
+    // Enforce consistent spacing around blocks
+    'block-spacing': 'error',
 
-  // Enforce consistent spacing before and after operators
-  "space-infix-ops": "error",
+    // Enforce consistent spacing around commas
+    'comma-spacing': 'error',
 
-  // Enforce consistent spacing before and after unary operators
-  "space-unary-ops": "error",
+    // Enforce consistent spacing before and after keywords
+    'keyword-spacing': 'error',
 
-  // Enforce consistent brace style for blocks
-  "brace-style": "error",
+    // Enforce consistent spacing before and after operators
+    'space-infix-ops': 'error',
 
-  // Enforce consistent spacing inside braces
-  "object-curly-spacing": ["error", "always"],
+    // Enforce consistent spacing before and after unary operators
+    'space-unary-ops': 'error',
 
-  // Enforce consistent spacing before function parentheses
-  "space-before-function-paren": [
-   "error",
-   {
-    anonymous: "never",
-    named: "never",
-    asyncArrow: "always",
-   },
-  ],
+    // Enforce consistent brace style for blocks
+    'brace-style': 'error',
 
-  // Enforce consistent spacing inside parentheses
-  "space-in-parens": ["error", "never"],
+    // Enforce consistent spacing inside braces
+    'object-curly-spacing': ['error', 'always'],
 
-  // Enforce consistent spacing inside array brackets
-  "array-bracket-spacing": ["error", "never"],
+    // Enforce consistent spacing before function parentheses
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'never',
+        named: 'never',
+        asyncArrow: 'always',
+      },
+    ],
 
-  // Enforce consistent spacing inside template literals
-  "template-curly-spacing": ["error", "never"],
+    // Enforce consistent spacing inside parentheses
+    'space-in-parens': ['error', 'never'],
 
-  // Enforce consistent spacing inside computed properties
-  "computed-property-spacing": ["error", "never"],
+    // Enforce consistent spacing inside array brackets
+    'array-bracket-spacing': ['error', 'never'],
 
-  // disallow use of variables before they are defined
-  "no-use-before-define": ["error", { functions: true, classes: true, variables: true }],
+    // Enforce consistent spacing inside template literals
+    'template-curly-spacing': ['error', 'never'],
 
-  // Disallow the var keyword
-  "no-label-var": "error",
+    // Enforce consistent spacing inside computed properties
+    'computed-property-spacing': ['error', 'never'],
 
-  // Disallow the use of undeclared variables unless mentioned in /*global */ comments
-  "no-undef": "error",
+    // disallow use of variables before they are defined
+    'no-use-before-define': ['error', { functions: true, classes: true, variables: true }],
 
-  // Disallow the use of undefined as an identifier
-  "no-undefined": "off",
+    // Disallow the var keyword
+    'no-label-var': 'error',
 
-  // Limit cyclomatic complexity
-  complexity: ["warn", 20],
+    // Disallow the use of undeclared variables unless mentioned in /*global */ comments
+    'no-undef': 'error',
 
-  // Disallow the use of alert, confirm, and prompt
-  "no-alert": "error",
+    // Disallow the use of undefined as an identifier
+    'no-undefined': 'off',
 
-  // Do not require await in async function
-  "require-await": "off",
+    // Limit cyclomatic complexity
+    complexity: ['warn', 20],
 
-  // Disallow Yoda conditions
-  yoda: "error",
+    // Disallow the use of alert, confirm, and prompt
+    'no-alert': 'error',
 
-  // disallow empty statements
-  "no-empty": "error",
+    // Do not require await in async function
+    'require-await': 'off',
 
-  // disallow unnecessary semicolons
-  "no-extra-semi": "error",
+    // Disallow Yoda conditions
+    yoda: 'error',
 
-  // ensure that the results of typeof are compared against a valid string
-  "valid-typeof": ["error", { requireStringLiterals: true }],
+    // disallow empty statements
+    'no-empty': 'error',
 
-  // Prefer double quotes for JSX attributes
-  "jsx-quotes": ["off", "prefer-double"],
+    // disallow unnecessary semicolons
+    'no-extra-semi': 'error',
 
-  // Disable the Unicode Byte Order Mark
-  "unicode-bom": ["error", "never"],
+    // ensure that the results of typeof are compared against a valid string
+    'valid-typeof': ['error', { requireStringLiterals: true }],
 
-  // disallow use of process.env
-  "no-process-env": "off",
+    // Prefer double quotes for JSX attributes
+    'jsx-quotes': ['off', 'prefer-double'],
 
-  // disallow process.exit()
-  "no-process-exit": "off",
+    // Disable the Unicode Byte Order Mark
+    'unicode-bom': ['error', 'never'],
 
-  // require all requires be top-level
-  "global-require": "error",
- },
-};
+    // disallow use of process.env
+    'no-process-env': 'off',
+
+    // disallow process.exit()
+    'no-process-exit': 'off',
+
+    // require all requires be top-level
+    'global-require': 'error',
+  },
+}

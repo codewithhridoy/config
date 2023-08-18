@@ -1,18 +1,18 @@
 {
- "$schema": "https://turbo.build/schema.json",
- "pipeline": {
-  "lint": {},
-  "format": {},
-  "format:check": {},
-  "build": {
-   "dependsOn": ["lint", "format:check"],
-   "cache": false
-  },
-  "publish-packages": {
-   "dependsOn": ["build"]
-  },
-  "test:publish-packages": {
-   "dependsOn": ["build"]
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "lint": {},
+    "format": {},
+    "format:check": {},
+    "build": {
+      "dependsOn": ["lint", "format:check"],
+      "cache": false
+    },
+    "publish-packages": {
+      "dependsOn": ["build"]
+    },
+    "test:publish-packages": {
+      "dependsOn": ["build"]
+    }
   }
- }
 }

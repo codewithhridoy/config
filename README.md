@@ -45,8 +45,10 @@ module.exports = {
 | ----------------------------- | -------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------------- |
 | `linebreak-style`             | unix                                                                       | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/linebreak-style)             |
 | `prettier/prettier`           | warn                                                                       | ⚠️ `Warning`  | External rule                                                              |
-| `quotes`                      | double                                                                     | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/quotes)                      |
-| `semi`                        | always                                                                     | ⚠️ `Warning`  | [Documentation](https://eslint.org/docs/rules/semi)                        |
+| `quotes`                      | single                                                                     | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/quotes)                      |
+| `semi`                        | never                                                                   | ⚠️ `Warning`  | [Documentation](https://eslint.org/docs/rules/semi)                        |
+| `newline-before-return`                        | error                                                                   | 🚫 `Error`  | [Documentation](https://eslint.org/docs/latest/rules/newline-before-return)                        |
+| `import/newline-after-import`                        | error (count 1)                                                                   | 🚫 `Error`  | [Documentation](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md)                        |
 | `comma-dangle`                | always-multiline, never               | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/comma-dangle)                |
 | `no-eval`                     | error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/no-eval)                     |
 | `func-names`                  | as-needed                                                                  | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/func-names)                  |
@@ -134,14 +136,14 @@ export default {
 | `bracketSpacing`             | `true`      | [Documentation](https://prettier.io/docs/en/options.html#bracket-spacing)              |
 | `embeddedLanguageFormatting` | `auto`      | [Documentation](https://prettier.io/docs/en/options.html#embedded-language-formatting) |
 | `htmlWhitespaceSensitivity`  | `css`       | [Documentation](https://prettier.io/docs/en/options.html#html-whitespace-sensitivity)  |
-| `jsxSingleQuote`             | `false`     | [Documentation](https://prettier.io/docs/en/options.html#jsx-single-quote)             |
+| `jsxSingleQuote`             | `true`     | [Documentation](https://prettier.io/docs/en/options.html#jsx-single-quote)             |
 | `printWidth`                 | `200000`    | [Documentation](https://prettier.io/docs/en/options.html#print-width)                  |
 | `proseWrap`                  | `preserve`  | [Documentation](https://prettier.io/docs/en/options.html#prose-wrap)                   |
 | `quoteProps`                 | `as-needed` | [Documentation](https://prettier.io/docs/en/options.html#quote-props)                  |
 | `requirePragma`              | `false`     | [Documentation](https://prettier.io/docs/en/options.html#require-pragma)               |
-| `semi`                       | `true`      | [Documentation](https://prettier.io/docs/en/options.html#semi)                         |
-| `singleQuote`                | `false`     | [Documentation](https://prettier.io/docs/en/options.html#single-quote)                 |
-| `tabWidth`                   | `1`         | [Documentation](https://prettier.io/docs/en/options.html#tab-width)                    |
+| `semi`                       | `false`      | [Documentation](https://prettier.io/docs/en/options.html#semi)                         |
+| `singleQuote`                | `true`     | [Documentation](https://prettier.io/docs/en/options.html#single-quote)                 |
+| `tabWidth`                   | `2`         | [Documentation](https://prettier.io/docs/en/options.html#tab-width)                    |
 | `trailingComma`              | `es5`       | [Documentation](https://prettier.io/docs/en/options.html#trailing-comma)               |
 | `useTabs`                    | `false`     | [Documentation](https://prettier.io/docs/en/options.html#use-tabs)                     |
 <!--END_SECTION:prettier-->
